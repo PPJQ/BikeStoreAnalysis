@@ -82,3 +82,78 @@ In our data we have the following tables:
   * zip_code
 
 ![Data Base Scheme](./data/database_scheme.png)
+
+# SQL 
+
+In this section we need to understand what are the necessities of the business.
+
+They want to know:
+* The state of the sales activities within the company and gain insight into the various trance happening in the sales volume over the period 2016 to 2018.
+
+* The revenue per region, store, product category and brand. 
+
+* A list of the top customers and sales representatives.
+
+With this in mind, let's take a look at the data and create a query to get all the information that we need to solve this problem.
+
+Let's start with the period of time, we will obtain this information in the orders table:
+
+```sql
+SELECT 
+  MIN(order_date) AS "Min Date", 
+  MAX(order_date) AS "Max Date" 
+FROM 
+  sales.orders;
+```
+
+This query give us the following result:
+
+<style>
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+  }
+</style>
+<div class=center>
+
+
+|   |  Min Date  | Max Date  |
+|---|------------|-----------|
+| 1 | 2016-01-01 | 2018-12-28|
+
+</div>
+
+So information that we have correspond to the period of time of our analysis.
+
+For the data that we need to collect is: 
+
+* order id
+* order date
+* customer name
+* sales representative name
+* region
+* store
+* product 
+* brand
+* quantity
+* price
+* discount
+
+Let's begin with the order id, customer name and order date
+
+```sql
+SELECT
+  ord.order_id,
+  CONCAT(cust.first_name,' ',cust.last_name),
+  cust.city,
+  cust.state,
+  ord.order_date
+FROM
+  sales.orders ord
+  Left JOIN sales.customers cust ON cust.customer_id= ord.customer_id;
+```
+<div>
+
+</div>
