@@ -1,11 +1,5 @@
 <!-- Styles -->
-<style>
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
 
 # 🚲 Bike Store Analysis
  Project of an analysis of a Bike Store to practice SQL, Excel and Tableau.
@@ -91,8 +85,9 @@ In our data we have the following tables:
   * zip_code
 
 <div class=center>
-<img src="./data/database_scheme.png">
+<img src="./img/database_scheme.png">
 </div>
+
 # SQL 
 
 In this section we need to understand what are the necessities of the business.
@@ -120,10 +115,22 @@ This query give us the following result:
 
 <div class=center>
 
-
-|   |  Min Date  | Max Date  |
-|---|------------|-----------|
-| 1 | 2016-01-01 | 2018-12-28|
+  <table border="1">
+    <thead>
+      <tr>
+        <th></td>
+        <th>Min Date</th>
+        <th>Max Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2016-01-01</td>
+        <td>2018-12-28</td>
+      </tr>
+    </tbody>
+  </table>
 
 </div>
 
@@ -157,7 +164,7 @@ FROM
   LEFT JOIN sales.customers cust ON cust.customer_id= ord.customer_id;
 ```
 <div class=center>
-<img src="./data/order and customers query.png">
+<img src="./img/order and customers query.png">
 </div>
 
 Now let's summarize the quantity of products and the revenue.
@@ -184,7 +191,7 @@ GROUP BY
 ```
 
 <div>
-<img src="./data/orders customers units and revenue query.png">
+<img src="./img/orders customers units and revenue query.png">
 </div>
 
 
@@ -215,7 +222,7 @@ GROUP BY
 ```
 
 <div class=center>
-<img src="./data/orders customers units revenue and product name query.png">
+<img src="./img/orders customers units revenue and product name query.png">
 </div>
 
 Now let's add the category
@@ -248,7 +255,7 @@ GROUP BY
 ```
 
 <div class=center>
-<img src="./data/orders customers units revenue product category.png">
+<img src="./img/orders customers units revenue product category.png">
 </div>
 Next the brand name
 
@@ -283,7 +290,7 @@ GROUP BY
 ```
 
 <div class=center>
-<img src="./data/brand query.png">
+<img src="./img/brand query.png">
 </div>
 
 And now the store name
@@ -322,7 +329,7 @@ GROUP BY
 ```
 
 <div class=center>
-<img src="./data/store query.png">
+<img src="./img/store query.png">
 </div>
 
 Finally let's add the sales rep
@@ -364,7 +371,39 @@ GROUP BY
 ```
 
 <div class=center>
-  <img src="./data/staff query.png">
+  <img src="./img/staff query.png">
 </div>
 
-Now we already have our dataset prepared.
+Now we already have our dataset prepared, let's continue with the next step.
+
+# Excel Dashboard
+
+For the Excel Dashboard we are going to export the dataset.
+
+In a new workbook, we are going to connect our database to Excel with query that we just made in the previous section: 
+
+<div class=center>
+  <img src="./img/Excel db connection.png">
+</div>
+<div>
+  <img src="./img/data load to excel.png">
+</div>
+
+Data loaded in the following file:
+
+### [Excel Dashboard](BikeStores%20Excel.xlsx)
+
+In our Excel workbook we will create three sheets: 
+
+  * Data
+  * Pivot Tables
+  * Dashboard
+
+In the "Data" sheet, as the name suggests, it's for the data that we import into Excel.
+
+The "Pivot Tables" sheet, we will create the pivot tables that answers the following points: 
+
+* Revenue per Year
+* Revenue per Month over the three years
+
+Of course, each pivot table will have its own chart.
