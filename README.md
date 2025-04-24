@@ -1,12 +1,24 @@
 <!-- Styles -->
 <link rel="stylesheet" type="text/css" href="styles.css"/>
 
-# 🚲 Bike Store Analysis
+# [🚲 Bike Store Analysis](#content-table)
  Project of an analysis of a Bike Store to practice SQL, Excel and Tableau.
 
 For this project we are going to use SQL Server for the database. Then we are going to connect our dataset to Excel and we are going to create an interactive Dashboard. And finally we are going to connect our Excel dataset to Tableau and also we are going to create a Dashboard.
 
-# 📚 Data
+# Content Table
+
+- [🚲 Bike Store Analysis](#-bike-store-analysis)
+- [Content Table](#content-table)
+- [📚 Data](#-data)
+  - [Production](#production)
+  - [Sales](#sales)
+- [SQL](#sql)
+- [Excel Dashboard](#excel-dashboard)
+    - [Link to Excel Dashboard](#link-to-excel-dashboard)
+- [Tableau Dashboard](#tableau-dashboard)
+
+# [📚 Data](#content-table)
 
 In our data we have the following tables: 
 
@@ -88,7 +100,7 @@ In our data we have the following tables:
 <img src="./img/database_scheme.png">
 </div>
 
-# SQL 
+# [SQL](#content-table) 
 
 In this section we need to understand what are the necessities of the business.
 
@@ -376,7 +388,7 @@ GROUP BY
 
 Now we already have our dataset prepared, let's continue with the next step.
 
-# Excel Dashboard
+# [Excel Dashboard](#content-table)
 
 For the Excel Dashboard we are going to export the dataset.
 
@@ -391,7 +403,7 @@ In a new workbook, we are going to connect our database to Excel with query that
 
 Data loaded in the following file:
 
-### [Excel Dashboard](BikeStores%20Excel.xlsx)
+### [Link to Excel Dashboard](BikeStores%20Excel.xlsx)
 
 In our Excel workbook we will create three sheets: 
 
@@ -405,5 +417,29 @@ The "Pivot Tables" sheet, we will create the pivot tables that answers the follo
 
 * Revenue per Year
 * Revenue per Month over the three years
+* Revenue per State
+* Revenue per Store
+* Revenue per Brand
+* Revenue per Product Category
+* Top 10 Customers By Revenue
+* Top Sales Rep By Revenue
 
 Of course, each pivot table will have its own chart.
+
+To make our Dashboard more interactive, we are going to add slicers that are going to help us to filter our charts. Those slicers are going to be for: 
+
+* Year
+* State 
+* Store
+
+After doing all that, we have our "**Executive Dashboard**":
+
+<div class=center>
+  <img src="./img/Executive Dashboard-1.png">
+  
+</div>
+<div class=center>
+    <img src="./img/Executive Dashboard-2.png">
+</div>
+
+# [Tableau Dashboard](#content-table)
