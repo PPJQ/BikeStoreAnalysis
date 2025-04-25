@@ -443,3 +443,10 @@ After doing all that, we have our "**Executive Dashboard**":
 </div>
 
 # [Tableau Dashboard](#content-table)
+
+For this section we are going to load our Excel file to access to the query developed in the first section.
+
+Once we load our data, we are going to create the following charts: 
+
+* Revenue Per Year
+* Revenue Per Month
