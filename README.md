@@ -17,6 +17,7 @@ For this project we are going to use SQL Server for the database. Then we are go
 - [Excel Dashboard](#excel-dashboard)
     - [Link to Excel Dashboard](#link-to-excel-dashboard)
 - [Tableau Dashboard](#tableau-dashboard)
+  - [Tableau Dashboard](#tableau-dashboard-1)
 
 # [📚 Data](#content-table)
 
@@ -442,6 +443,12 @@ After doing all that, we have our "**Executive Dashboard**":
     <img src="./img/Executive Dashboard-2.png">
 </div>
 
+<div>
+  <p>
+    <! it's to separate a little bit the last images of the title below -->
+  </p>
+</div>
+
 # [Tableau Dashboard](#content-table)
 
 For this section we are going to load our Excel file to access to the query developed in the first section.
@@ -450,3 +457,21 @@ Once we load our data, we are going to create the following charts:
 
 * Revenue Per Year
 * Revenue Per Month
+* Revenue Per State
+* Revenue Per Store
+* Revenue Per Brand
+* Revenue Per Category
+* Revenue Per Sales Rep
+
+Also we are going to create a filter that will allow us to select the year of the dashboard charts.
+
+For our dashboard we also are going to create a banner that contain the following information: 
+
+* Total Revenue
+* Customers
+* \# Orders
+* Total Units
+
+You can review the dashboard in the following link: 
+
+## [Tableau Dashboard](https://public.tableau.com/app/profile/jos.jim.nez6777/viz/BikeStoreDashboard_17456276882530/BikeStoreDashboard?publish=yes) 
